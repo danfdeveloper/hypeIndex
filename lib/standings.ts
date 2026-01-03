@@ -1,4 +1,3 @@
-// lib/espn.ts
 export type TeamRow = {
     name: string
     wins: number

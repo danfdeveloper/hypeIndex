@@ -1,8 +1,7 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
+import ClientLayout from "./ClientLayout";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -21,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoMono.className} antialiased`}>
-        <AuthProvider>
+        <ClientLayout>
           {children}
-        </AuthProvider>
+        </ClientLayout>
       </body>
     </html>
   );

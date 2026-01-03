@@ -1,4 +1,3 @@
-// lib/nbaApi.ts
 interface Team {
     name: string;
     wins: number;
