@@ -4,8 +4,8 @@ interface Team {
 }
 
 export const calculateHype = (homeTeam: Team, awayTeam: Team): number => {
-  const homeWinPct = homeTeam.wins / (homeTeam.wins + homeTeam.losses) || 0;
-  const awayWinPct = awayTeam.wins / (awayTeam.wins + awayTeam.losses) || 0;
+  const homeWinPct = (homeTeam.wins + 5) / (homeTeam.wins + homeTeam.losses + 5) || 0;
+  const awayWinPct = (awayTeam.wins + 5) / (awayTeam.wins + awayTeam.losses + 5) || 0;
 
   // Higher hype when both teams have better records
   const avgWinPct = (homeWinPct + awayWinPct) / 2;

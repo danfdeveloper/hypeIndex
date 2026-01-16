@@ -95,8 +95,8 @@ export default function GameCard({ game, rank, favoriteTeam, timezone = 'America
 
                 {/* time and @ */}
                 <div className="text-center">
-                    <div className="text-xs">{formatGameTime(game.date)}</div>
-                    <div className="text-purple-400 font-bold text-3xl">@</div>
+                    <div className="text-2xl">{formatGameTime(game.date)}</div>
+                    <div className="text-purple-400 font-bold text-5xl">@</div>
                 </div>
 
                 {/* Home Team */}

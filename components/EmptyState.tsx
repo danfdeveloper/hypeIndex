@@ -2,8 +2,6 @@ import Header from './Header';
 
 import { useRouter } from 'next/navigation'
 
-
-
 export default function EmptyState() {
     const router = useRouter()
     const goToLogin = () => {
