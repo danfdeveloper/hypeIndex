@@ -46,9 +46,7 @@ export const calculateHype = (
   // Extra hype if both teams are hot (both on win streaks)
   const bothHotBonus =
     homeStreak?.startsWith('W') && awayStreak?.startsWith('W') &&
-      parseInt(homeStreak.substring(1)) >= 3 && parseInt(awayStreak.substring(1)) >= 3
-      ? 5
-      : 0;
+      parseInt(homeStreak.substring(1)) >= 3 && parseInt(awayStreak.substring(1)) >= 3 ? 5 : 0;
 
   // Base hype score 
   const baseHype = avgWinPct * 100 + competitivenessBonus * 10;
@@ -57,5 +55,5 @@ export const calculateHype = (
   const finalHype = baseHype + totalStreakBonus + bothHotBonus;
 
   // Apply curve and cap at 100
-  return Math.min(100, Math.round(10 * finalHype));
+  return Math.min(100, Math.round(10 * Math.sqrt(finalHype)));
 };
